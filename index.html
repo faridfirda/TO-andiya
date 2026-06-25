@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Kamu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* --- STYLING AREA FOTO --- */
+        .photo-gallery {
+            margin-bottom: 25px;
+        }
+
+        .photo-item {
+            margin-bottom: 20px;
+            background: #fafafa;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .photo-caption {
+            font-size: 13px;
+            color: #777;
+            font-style: italic;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        /* --- STYLING TEKS & TOMBOL --- */
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 15px;
+            text-align: left;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 14px;
+            flex: 1;
+        }
+
+        .btn-yes {
+            background-color: #4A90E2;
+            color: white;
+        }
+
+        .btn-yes:hover {
+            background-color: #357ABD;
+        }
+
+        .btn-no {
+            background-color: #f0f2f5;
+            color: #666;
+        }
+
+        .btn-no:hover {
+            background-color: #e4e6eb;
+        }
+
+        #response-message {
+            margin-top: 20px;
+            font-weight: 600;
+            color: #2ecc71;
+            display: none;
+            padding: 12px;
+            background-color: #e8f8f0;
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- === 1. BAGIAN FOTO === -->
+        <div class="photo-gallery">
+            
+            <!-- Foto 1 -->
+            <div class="photo-item">
+                <img src="WhatsApp Image 2026-06-25 at 20.48.44.jpeg" alt="Foto Kita 1">
+                <div class="photo-caption">"Ini chat kita awal kenal, lucu kan walaupun gaje. Dari sini kita mulai kenal, ngobrol, main, dan ketawa bareng."</div>
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="photo-item">
+                <img src="WhatsApp Image 2026-06-25 at 20.46.07.jpeg" alt="Foto Kita 2">
+                <div class="photo-caption">"Di sini aku beraniin buat ajak kamu jadi pacar aku walaupun malu-malu tapi aku paksain. Malah agak kayak jamet depan gang kamu sih wkwk, tapi gapapa ini lucu kok kalau bisa diulang lagi."</div>
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="photo-item">
+                <img src="WhatsApp Image 2026-06-25 at 20.46.59.jpeg" alt="Foto Kita 3">
+                <div class="photo-caption">"Ini kita balik lagi ke tempat di mana kita akhirnya deket dan bisa sampe pacaran. Makasih juga di sini kamu mau ajak ngobrol aku awal-awal kenal, seru ya kita."</div>
+            </div>
+
+            <!-- Foto 4 -->
+            <div class="photo-item">
+                <img src="WhatsApp Image 2026-06-25 at 20.45.06.jpeg" alt="Foto Kita 4">
+                <div class="photo-caption">"Ini kita pertama kali ke pantai dan main jauh, seru banget. Walaupun capek tapi ga kerasa capeknya karena banyak seru dan ramenya."</div>
+            </div>
+
+            <!-- Foto 5 -->
+            <div class="photo-item">
+                <img src="WhatsApp Image 2026-06-25 at 21.06.20.jpeg" alt="Foto Kita 5">
+                <div class="photo-caption">"Aku pertama kali diajak keluarga kamu bukber dan ikut acara keluarga orang, seru banget. Aku diterima sama semua keluarga kamu, makasih ya."</div>
+            </div>
+
+            <!-- Foto 6 -->
+            <div class="photo-item">
+                <img src="WhatsApp Image 2026-06-25 at 21.06.48.jpeg" alt="Foto Kita 6">
+                <div class="photo-caption">"Ini pertama kali rayain ultah orang, takut ketahuan sama kamu walaupun akhirnya ketahuan sih hehe."</div>
+            </div>
+
+            <!-- Foto 7 -->
+            <div class="photo-item">
+                <img src="WhatsApp Image 2026-06-25 at 21.08.45.jpeg" alt="Foto Kita 7">
+                <div class="photo-caption">"Aku diajak mondok sama keluarga kamu. Aku ngerasain keluarga yang lucu, ketawa bareng, seseruan bareng sama kamu dan keluarga kamu. Makasih juga buat mamah karena ajak aku walaupun ngerasa ga berguna hehe, tapi seru kok aku bahagia sama kamu."</div>
+            </div>
+
+            <!-- Foto 8 -->
+            <div class="photo-item">
+                <img src="WhatsApp Image 2026-06-25 at 21.09.35.jpeg" alt="Foto Kita 8">
+                <div class="photo-caption">"Dan ini adalah foto yang terakhir kita ketemu. Mungkin sekarang kita lagi ga ketemu, tapi kalau emang kita bisa ketemu lagi, aku mau secepatnya ketemu."</div>
+            </div>
+        </div>
+
+        <!-- === 2. BAGIAN UTAMA / TEKS AJAKAN === -->
+        <h1>Hai Andiya,</h1>
+        <p>
+            Maaf kalau fotonya agak loncat atau ngaco soalnya di galerinya udah acak-acakan. Aku cuman mau nunjukin aja betapa serunya aku sama kamu dan seberapa bahagianya aku sama kamu.
+            <br><br>
+            Aku tau kamu butuh waktu, tapi aku minta untuk tidak terlalu lama aku menunggu kamu di sini. Kalau emang kamu ga akan balik lagi ke aku atau kamu mau pergi untuk selamanya, kasih tahu aku. Jangan suruh aku nunggu space kamu yang gatau sampe kapan, tapi aku bakal tetap tunggu kamu.
+            <br><br>
+            Lewat sini aku cuman mau berterima kasih udah diajak ke keluarga kamu, udah disayang sama kamu. Gatau kita ke depannya gimana, tapi makasih banyak ya atas semuanya yang udah kamu usahakan buat aku. Makasih udah sabar sama sikap aku, makasih udah mau sama aku. I love you, Andiya. 🩷
+            <br><br>
+            Kalau kamu mau bales ini pencet aja tombol di bawah. Kalau kamu pencet balikan, kita balikan gapapa ada space juga, yang penting aku bisa sama kamu untuk ngobrol atau jalan-jalan (IC maupun OOC). Kalau sebaliknya ya gapapa juga, aku kasih space sampe kapan pun.
+        </p>
+
+        <!-- === 3. BAGIAN TOMBOL PILIHAN === -->
+        <div class="buttons">
+            <button class="btn-yes" onclick="showResponse('Terimakasih masih mau sama aku boleh kan aku nempel sama kmu ooc ic')">Mau Balikan</button>
+            <button class="btn-no" onclick="showResponse('Nggak apa-apa, ambil waktu yang kamu butuhin ya. Aku tetep hargai keputusanmu. 😊')">Masih Butuh Waktu</button>
+        </div>
+
+        <!-- Tempat munculnya jawaban setelah tombol diklik -->
+        <div id="response-message"></div>
+    </div>
+
+    <script>
+        function showResponse(message) {
+            const msgDiv = document.getElementById('response-message');
+            msgDiv.innerText = message;
+            msgDiv.style.display = 'block';
+            
+            // Sembunyikan tombol pilihan setelah salah satu diklik
+            document.querySelector('.buttons').style.display = 'none';
+
+            // === PENTING: Ganti 628xxxxxxxxxx dengan nomor WA kamu ===
+            const nomorWA = "6285211075387"; 
+            
+            const pesanTeks = encodeURIComponent("Hai, boleh aja ko : " + message);
+
+            // Dialihkan ke WhatsApp otomatis setelah 1.5 detik
+            setTimeout(() => {
+                window.location.href = `https://wa.me/${nomorWA}?text=${pesanTeks}`;
+            }, 2500);
+        }
+    </script>
+
+</body>
+</html>
